@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
 
+    public CoinManager cm;
     // Update is called once per frame
     void Update()
     {
@@ -65,5 +66,14 @@ public class Movement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue <Vector2>().x;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            cm.coinCount++;
+        }
     }
 }

@@ -1,34 +1,19 @@
 fileFormatVersion: 2
-guid: 0f6b6e0441d7b3e4797a4fdbf27beecb
+guid: 28fc89e2c88aab944aa059e9200b2d7e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2841042033015214791
-    second: male_hero-combo_2_0
+      213: 7301479720404975506
+    second: spr_coin_roj_0
   - first:
-      213: 6773909760351945656
-    second: male_hero-combo_2_1
+      213: 1776079719383877786
+    second: spr_coin_roj_1
   - first:
-      213: 9056663203623153789
-    second: male_hero-combo_2_2
+      213: 6337075000036577556
+    second: spr_coin_roj_2
   - first:
-      213: 8174830846537940748
-    second: male_hero-combo_2_3
-  - first:
-      213: 106074968515182017
-    second: male_hero-combo_2_4
-  - first:
-      213: -2449767252306328848
-    second: male_hero-combo_2_5
-  - first:
-      213: 1821806763955137060
-    second: male_hero-combo_2_6
-  - first:
-      213: 6675499733367010411
-    second: male_hero-combo_2_7
-  - first:
-      213: -8538898648388667186
-    second: male_hero-combo_2_8
+      213: -7558928413261835894
+    second: spr_coin_roj_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -124,133 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: male_hero-combo_2_0
+      name: spr_coin_roj_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 128
-        height: 128
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7c253d13da86d6720800000000000000
-      internalID: 2841042033015214791
+      spriteID: 29ff47dee11145560800000000000000
+      internalID: 7301479720404975506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: male_hero-combo_2_1
+      name: spr_coin_roj_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 18
         y: 0
-        width: 128
-        height: 128
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b3445e8903c10e50800000000000000
-      internalID: 6773909760351945656
+      spriteID: a98c6ae3817e5a810800000000000000
+      internalID: 1776079719383877786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: male_hero-combo_2_2
+      name: spr_coin_roj_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 34
         y: 0
-        width: 128
-        height: 128
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d703f4e033bbfad70800000000000000
-      internalID: 9056663203623153789
+      spriteID: 41150342320d1f750800000000000000
+      internalID: 6337075000036577556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: male_hero-combo_2_3
+      name: spr_coin_roj_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 50
         y: 0
-        width: 128
-        height: 128
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0fbcc2c755d27170800000000000000
-      internalID: 8174830846537940748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: male_hero-combo_2_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1cd78e13f9ad87100800000000000000
-      internalID: 106074968515182017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: male_hero-combo_2_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0f285e7d9ada00ed0800000000000000
-      internalID: -2449767252306328848
+      spriteID: a81dbe438aa491790800000000000000
+      internalID: -7558928413261835894
       vertices: []
       indices: 
       edges: []
@@ -259,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5b564ef83e14eff4885f73b8bb63fe2d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -267,16 +208,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      male_hero-combo_2_0: 2841042033015214791
-      male_hero-combo_2_1: 6773909760351945656
-      male_hero-combo_2_2: 9056663203623153789
-      male_hero-combo_2_3: 8174830846537940748
-      male_hero-combo_2_4: 106074968515182017
-      male_hero-combo_2_5: -2449767252306328848
+      spr_coin_roj_0: 7301479720404975506
+      spr_coin_roj_1: 1776079719383877786
+      spr_coin_roj_2: 6337075000036577556
+      spr_coin_roj_3: -7558928413261835894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
