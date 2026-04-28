@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: 0f6b6e0441d7b3e4797a4fdbf27beecb
+guid: 65989f341a826694e860261a677e1080
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2841042033015214791
-    second: male_hero-combo_2_0
+      213: 6088342627132289551
+    second: MonedaD_0
   - first:
-      213: 6773909760351945656
-    second: male_hero-combo_2_1
+      213: -2359506160307568889
+    second: MonedaD_1
   - first:
-      213: 9056663203623153789
-    second: male_hero-combo_2_2
+      213: 4966363116081101388
+    second: MonedaD_2
   - first:
-      213: 8174830846537940748
-    second: male_hero-combo_2_3
+      213: -672162727369665448
+    second: MonedaD_3
   - first:
-      213: 106074968515182017
-    second: male_hero-combo_2_4
-  - first:
-      213: -2449767252306328848
-    second: male_hero-combo_2_5
-  - first:
-      213: 1821806763955137060
-    second: male_hero-combo_2_6
-  - first:
-      213: 6675499733367010411
-    second: male_hero-combo_2_7
-  - first:
-      213: -8538898648388667186
-    second: male_hero-combo_2_8
+      213: 2361706786320140148
+    second: MonedaD_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -124,133 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: male_hero-combo_2_0
+      name: MonedaD_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7c253d13da86d6720800000000000000
-      internalID: 2841042033015214791
+      spriteID: f02b619ac532e7450800000000000000
+      internalID: 6088342627132289551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: male_hero-combo_2_1
+      name: MonedaD_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 18
         y: 0
-        width: 128
-        height: 128
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b3445e8903c10e50800000000000000
-      internalID: 6773909760351945656
+      spriteID: 70f758df5a9514fd0800000000000000
+      internalID: -2359506160307568889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: male_hero-combo_2_2
+      name: MonedaD_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 36
         y: 0
-        width: 128
-        height: 128
+        width: 8
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d703f4e033bbfad70800000000000000
-      internalID: 9056663203623153789
+      spriteID: c4abd9fe0f01ce440800000000000000
+      internalID: 4966363116081101388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: male_hero-combo_2_3
+      name: MonedaD_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 50
         y: 0
-        width: 128
-        height: 128
+        width: 12
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0fbcc2c755d27170800000000000000
-      internalID: 8174830846537940748
+      spriteID: 8549fdb8f8ffba6f0800000000000000
+      internalID: -672162727369665448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: male_hero-combo_2_4
+      name: MonedaD_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 64
         y: 0
-        width: 128
-        height: 128
+        width: 15
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1cd78e13f9ad87100800000000000000
-      internalID: 106074968515182017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: male_hero-combo_2_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0f285e7d9ada00ed0800000000000000
-      internalID: -2449767252306328848
+      spriteID: 477cd3e2fc776c020800000000000000
+      internalID: 2361706786320140148
       vertices: []
       indices: 
       edges: []
@@ -259,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e40ee9b42bfaac94e8593756e748a837
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -267,16 +233,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      male_hero-combo_2_0: 2841042033015214791
-      male_hero-combo_2_1: 6773909760351945656
-      male_hero-combo_2_2: 9056663203623153789
-      male_hero-combo_2_3: 8174830846537940748
-      male_hero-combo_2_4: 106074968515182017
-      male_hero-combo_2_5: -2449767252306328848
+      MonedaD_0: 6088342627132289551
+      MonedaD_1: -2359506160307568889
+      MonedaD_2: 4966363116081101388
+      MonedaD_3: -672162727369665448
+      MonedaD_4: 2361706786320140148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
