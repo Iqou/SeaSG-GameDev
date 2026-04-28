@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class EnemyDamage : MonoBehaviour
 {
     [Header("Damage Settings")]

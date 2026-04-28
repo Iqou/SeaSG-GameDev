@@ -19,7 +19,7 @@ public class AttackSystem : MonoBehaviour
     {
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
-            if (animator != null)
+            if(animator != null)
             {
                 animator.SetTrigger("Attack");
             }
@@ -29,7 +29,7 @@ public class AttackSystem : MonoBehaviour
                 enemy.GetComponent<HealthManager>().TakeDamage(attackDamage);
             }
         }
-
+        
     }
     private void OnDrawGizmos()
     {

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class HealthManager : MonoBehaviour
 {
     public int maxHealth = 100;
@@ -11,12 +12,12 @@ public class HealthManager : MonoBehaviour
     {
         currentHealth = maxHealth;
 
-        /* // Cek apakah healthBar sudah diisi di Inspector sebelum memanggilnya
-         if (healthBar != null)
-         {
-             healthBar.SetMaxHealth(maxHealth);
-         }
-        */
+       /* // Cek apakah healthBar sudah diisi di Inspector sebelum memanggilnya
+        if (healthBar != null)
+        {
+            healthBar.SetMaxHealth(maxHealth);
+        }
+       */
     }
 
     void Update()
@@ -44,8 +45,11 @@ public class HealthManager : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("Karakter Mati!");
-            //Destroy(gameObject); // Hapus objek karakter dari scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //Ini Ngambil Scene index yang sedang aktif 
+            
+            //Destroy(gameObject)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+
+  
 }

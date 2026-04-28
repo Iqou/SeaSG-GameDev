@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 5403a48b8cf3b2b408645d9b97e4c7d4
+guid: cba170472e9b14443b02fef0644a3dab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8710723752907654049
-    second: spr_coin_azu_0
-  - first:
-      213: -5065929880676911926
-    second: spr_coin_azu_1
-  - first:
-      213: 1930441562187272357
-    second: spr_coin_azu_2
-  - first:
-      213: 5258327978300046976
-    second: spr_coin_azu_3
+      213: 6761586975460818270
+    second: horizontal_border_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_coin_azu_0
+      name: horizontal_border_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 12
-        height: 16
+        width: 911
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a34e941a15b2e870800000000000000
-      internalID: 8710723752907654049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_coin_azu_1
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ac4373d2d9332b9b0800000000000000
-      internalID: -5065929880676911926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_coin_azu_2
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a092d57f5e4aca10800000000000000
-      internalID: 1930441562187272357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_coin_azu_3
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08e721bbf6559f840800000000000000
-      internalID: 5258327978300046976
+      spriteID: e5dff3e978bf5dd50800000000000000
+      internalID: 6761586975460818270
       vertices: []
       indices: 
       edges: []
@@ -210,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spr_coin_azu_0: 8710723752907654049
-      spr_coin_azu_1: -5065929880676911926
-      spr_coin_azu_2: 1930441562187272357
-      spr_coin_azu_3: 5258327978300046976
+      horizontal_border_0: 6761586975460818270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
