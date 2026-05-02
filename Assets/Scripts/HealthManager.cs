@@ -45,7 +45,7 @@ public class HealthManager : MonoBehaviour
         {
             Debug.Log("Karakter Mati!");
             //Destroy(gameObject); // Hapus objek karakter dari scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //Ini Ngambil Scene index yang sedang aktif 
+            Destroy(gameObject);
         }
     }
 }
