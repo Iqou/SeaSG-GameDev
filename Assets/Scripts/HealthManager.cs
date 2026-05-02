@@ -46,6 +46,7 @@ public class HealthManager : MonoBehaviour
             Debug.Log("Karakter Mati!");
             //Destroy(gameObject); // Hapus objek karakter dari scene
             Destroy(gameObject);
+            SoundManager.Instance.PlaySound2D("Death");
         }
     }
 }

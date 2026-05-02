@@ -74,7 +74,7 @@ public class Movement : MonoBehaviour
         {
             Destroy(other.gameObject);
             cm.coinCount++;
-            
+            SoundManager.Instance.PlaySound2D("Coin");
         }
     }
 }

@@ -32,6 +32,7 @@ public class AttackSystem : MonoBehaviour
                     enemy.GetComponent<HealthManager>().TakeDamage(attackDamage);
                 }
             }
+            SoundManager.Instance.PlaySound2D("Attack");
         }
 
     }
