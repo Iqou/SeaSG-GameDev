@@ -5,18 +5,18 @@ public class HealthManager : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
-    //public HealthBar healthBar;
+    public HealthBar healthBar;
 
     void Start()
     {
         currentHealth = maxHealth;
 
-        /* // Cek apakah healthBar sudah diisi di Inspector sebelum memanggilnya
+        
          if (healthBar != null)
          {
              healthBar.SetMaxHealth(maxHealth);
          }
-        */
+        
     }
 
     void Update()
@@ -34,13 +34,13 @@ public class HealthManager : MonoBehaviour
         currentHealth -= damage;
         Debug.Log("Terkena damage! HP sekarang: " + currentHealth); // Bantuan visual di Console
 
-        /*// Cek apakah healthBar sudah diisi sebelum memperbarui UI
+        
         if (healthBar != null)
         {
             healthBar.SetCurrentHealth(currentHealth);
         }
-        */
-        // Tambahan logika jika HP habis (Opsional)
+        
+        
         if (currentHealth <= 0)
         {
             Debug.Log("Karakter Mati!");
