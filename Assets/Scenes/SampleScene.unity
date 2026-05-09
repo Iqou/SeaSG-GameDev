@@ -1117,7 +1117,7 @@ MonoBehaviour:
   enemy: {fileID: 676158654}
   animator: {fileID: 676158655}
   moveSpeed: 3
-  attackRange: 1.5
+  attackRange: 2
   damageAmount: 10
   attackCooldown: 1
 --- !u!50 &676158657

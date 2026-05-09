@@ -41,6 +41,8 @@ public class EnemyDetection : MonoBehaviour
 
     private bool playerDetected = false;
     private float lastAttackTime;
+    private Rigidbody2D enemyRb;
+    private EnemyState previousState;
 
     // =========================
     // START
@@ -48,6 +50,40 @@ public class EnemyDetection : MonoBehaviour
     private void Start()
     {
         currentState = EnemyState.Idle;
+        previousState = currentState;
+        if (enemy != null)
+        {
+            enemyRb = enemy.GetComponent<Rigidbody2D>();
+        }
+
+        if (player == null)
+        {
+            Debug.LogWarning("EnemyDetection: 'player' reference is not set in the Inspector.");
+        }
+
+        if (enemy == null)
+        {
+            Debug.LogWarning("EnemyDetection: 'enemy' reference is not set in the Inspector.");
+        }
+
+        if (animator == null)
+        {
+            Debug.LogWarning("EnemyDetection: 'animator' reference is not set in the Inspector.");
+        }
+
+        // state entry handling
+        if (currentState != previousState)
+        {
+            Debug.Log($"Enemy state: {previousState} -> {currentState}");
+            if (currentState == EnemyState.Attack && animator != null)
+            {
+                Debug.Log($"EnemyDetection: entering Attack state - setting animator trigger. HasState(Attack)={animator.HasState(0, Animator.StringToHash("Attack"))}");
+                animator.SetTrigger("Attack");
+                var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+                Debug.Log($"Animator current state shortNameHash={stateInfo.shortNameHash}, normalizedTime={stateInfo.normalizedTime}, isInTransition={animator.IsInTransition(0)}");
+            }
+            previousState = currentState;
+        }
     }
 
     // =========================
@@ -55,6 +91,9 @@ public class EnemyDetection : MonoBehaviour
     // =========================
     private void Update()
     {
+        if (player == null || enemy == null || animator == null)
+            return;
+
         float distanceToPlayer = Vector2.Distance(
             enemy.position,
             player.transform.position
@@ -70,8 +109,7 @@ public class EnemyDetection : MonoBehaviour
                 SetAnimation(
                     idle: true,
                     Walk: false,
-                    jump: false,
-                    attack: false
+                    jump: false
                 );
 
                 // Detect player
@@ -90,8 +128,7 @@ public class EnemyDetection : MonoBehaviour
                 SetAnimation(
                     idle: false,
                     Walk: true,
-                    jump: false,
-                    attack: false
+                    jump: false
                 );
 
                 // Player escaped
@@ -119,8 +156,7 @@ public class EnemyDetection : MonoBehaviour
                 SetAnimation(
                     idle: false,
                     Walk: false,
-                    jump: false,
-                    attack: true
+                    jump: false
                 );
 
                 // Player too far
@@ -131,6 +167,7 @@ public class EnemyDetection : MonoBehaviour
                 }
 
                 AttackPlayer();
+           
 
                 break;
         }
@@ -159,11 +196,20 @@ public class EnemyDetection : MonoBehaviour
         // -------------------------
         // MOVE ENEMY
         // -------------------------
-        enemy.position = Vector2.MoveTowards(
-            enemy.position,
-            player.transform.position,
-            moveSpeed * Time.deltaTime
-        );
+        Vector2 targetPos = player.transform.position;
+        if (enemyRb != null)
+        {
+            Vector2 next = Vector2.MoveTowards(enemyRb.position, targetPos, moveSpeed * Time.deltaTime);
+            enemyRb.MovePosition(next);
+        }
+        else
+        {
+            enemy.position = Vector2.MoveTowards(
+                enemy.position,
+                targetPos,
+                moveSpeed * Time.deltaTime
+            );
+        }
 
         // -------------------------
         // FLIP SPRITE
@@ -200,7 +246,7 @@ public class EnemyDetection : MonoBehaviour
             {
                 health.TakeDamage(damageAmount);
             }
-
+            animator.SetTrigger("Attack");
             lastAttackTime = Time.time;
         }
     }
@@ -210,15 +256,17 @@ public class EnemyDetection : MonoBehaviour
     // =========================
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == player)
+        if (other.CompareTag("Player"))
         {
             playerDetected = true;
+            if (player == null)
+                player = other.gameObject;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject == player)
+        if (other.CompareTag("Player"))
         {
             playerDetected = false;
         }
@@ -230,14 +278,13 @@ public class EnemyDetection : MonoBehaviour
     private void SetAnimation(
         bool idle,
         bool Walk,
-        bool jump,
-        bool attack
+        bool jump
     )
     {
-        animator.SetBool("idle", idle);
+        // Use consistent parameter names in the Animator: Idle, Walk, Jump
+        animator.SetBool("Idle", idle);
         animator.SetBool("Walk", Walk);
         animator.SetBool("Jump", jump);
-        animator.SetBool("attack", attack);
     }
 
     // =========================

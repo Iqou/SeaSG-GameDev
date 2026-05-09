@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
 
     public Animator animator;
 
+    private AttackSystem attackSystem;
+
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
@@ -29,8 +31,23 @@ public class Movement : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        attackSystem = GetComponent<AttackSystem>();
+    }
+
     private void FixedUpdate()
     {
+        // If attacking, prevent horizontal movement and stop walk animation
+        if (attackSystem != null && attackSystem.isAttacking)
+        {
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            animator.SetFloat("xVelocity", 0f);
+            animator.SetBool("IsJumping", !isGrounded());
+            animator.SetFloat("yVelocity", rb.linearVelocity.y);
+            return;
+        }
+
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
         animator.SetFloat("xVelocity", Mathf.Abs(rb.linearVelocity.x));
         animator.SetBool("IsJumping", !isGrounded());
@@ -65,6 +82,10 @@ public class Movement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
+        // Ignore movement input while attacking
+        if (attackSystem != null && attackSystem.isAttacking)
+            return;
+
         horizontal = context.ReadValue <Vector2>().x;
     }
 
