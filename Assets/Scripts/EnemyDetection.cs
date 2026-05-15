@@ -70,20 +70,6 @@ public class EnemyDetection : MonoBehaviour
         {
             Debug.LogWarning("EnemyDetection: 'animator' reference is not set in the Inspector.");
         }
-
-        // state entry handling
-        if (currentState != previousState)
-        {
-            Debug.Log($"Enemy state: {previousState} -> {currentState}");
-            if (currentState == EnemyState.Attack && animator != null)
-            {
-                Debug.Log($"EnemyDetection: entering Attack state - setting animator trigger. HasState(Attack)={animator.HasState(0, Animator.StringToHash("Attack"))}");
-                animator.SetTrigger("Attack");
-                var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-                Debug.Log($"Animator current state shortNameHash={stateInfo.shortNameHash}, normalizedTime={stateInfo.normalizedTime}, isInTransition={animator.IsInTransition(0)}");
-            }
-            previousState = currentState;
-        }
     }
 
     // =========================
