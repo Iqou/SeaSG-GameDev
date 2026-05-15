@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class AttackSystem : MonoBehaviour
 {
@@ -19,6 +20,14 @@ public class AttackSystem : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0f)
+            return;
+
+        // 3. Prevent attacking if the mouse is over a UI Element (like the Pause Button)
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            return;
+
+
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             if (animator != null)

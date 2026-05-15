@@ -57,7 +57,6 @@ public class HealthManager : MonoBehaviour
             {
                 // If it's an enemy, just destroy it
                 Destroy(gameObject);
-                //Destroy(gameObject);
                 //SoundManager.Instance.PlaySound2D("Death");
             }
         }

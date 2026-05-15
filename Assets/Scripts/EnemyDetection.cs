@@ -164,8 +164,7 @@ public class EnemyDetection : MonoBehaviour
     // =========================
     private void MoveToPlayer()
     {
-        Vector2 direction =
-            player.transform.position - enemy.position;
+        Vector2 direction = player.transform.position - enemy.position;
 
         // -------------------------
         // MOVEMENT ANIMATION
