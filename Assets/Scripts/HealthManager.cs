@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class HealthManager : MonoBehaviour
@@ -7,16 +8,18 @@ public class HealthManager : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public static event Action OnPlayerDeath;
+
     void Start()
     {
         currentHealth = maxHealth;
 
-        
-         if (healthBar != null)
-         {
-             healthBar.SetMaxHealth(maxHealth);
-         }
-        
+
+        if (healthBar != null)
+        {
+            healthBar.SetMaxHealth(maxHealth);
+        }
+
     }
 
     void Update()
@@ -34,19 +37,29 @@ public class HealthManager : MonoBehaviour
         currentHealth -= damage;
         Debug.Log("Terkena damage! HP sekarang: " + currentHealth); // Bantuan visual di Console
 
-        
+
         if (healthBar != null)
         {
             healthBar.SetCurrentHealth(currentHealth);
         }
-        
-        
+
+
         if (currentHealth <= 0)
         {
-            Debug.Log("Karakter Mati!");
-            //Destroy(gameObject); // Hapus objek karakter dari scene
-            Destroy(gameObject);
-            //SoundManager.Instance.PlaySound2D("Death");
+            Debug.Log(gameObject.name + " Mati!");
+
+            // Check if this object is the Player
+            if (gameObject.CompareTag("Player"))
+            {
+                OnPlayerDeath?.Invoke(); // Memicu event kematian untuk Player
+            }
+            else
+            {
+                // If it's an enemy, just destroy it
+                Destroy(gameObject);
+                //Destroy(gameObject);
+                //SoundManager.Instance.PlaySound2D("Death");
+            }
         }
     }
 }
